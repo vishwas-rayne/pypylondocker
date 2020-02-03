@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+    ## Define basler_test service
+    basler_test:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+            args:
+                UBUNTU_IMAGE_VERSION: ${UBUNTU_IMAGE_VERSION}
+        image: basler_test
+        network_mode: host
